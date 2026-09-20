@@ -328,7 +328,7 @@ a{color:inherit}
   padding:105px 24px 120px;
   text-align:center;
 }
-.imprint-page:target{
+.imprint-page.is-open{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -520,14 +520,40 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 
 
 <script>
-function closeImprint(e){
-  e.preventDefault();
-  history.replaceState(null,"",location.pathname+location.search);
+function openImprint(e){
+  if(e) e.preventDefault();
   const panel=document.getElementById("imprint");
-  if(panel) panel.setAttribute("aria-hidden","true");
+  if(!panel) return;
+  panel.classList.add("is-open");
+  panel.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+}
+
+function closeImprint(e){
+  if(e) e.preventDefault();
+  const panel=document.getElementById("imprint");
+  if(!panel) return;
+  panel.classList.remove("is-open");
+  panel.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+  if(location.hash==="#imprint"){
+    history.replaceState(null,"",location.pathname+location.search);
+  }
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
+  const imprint=document.getElementById("imprint");
+  if(location.hash==="#imprint") openImprint();
+  window.addEventListener("hashchange",()=>{
+    if(location.hash==="#imprint") openImprint();
+    else if(imprint) closeImprint();
+  });
+  if(imprint){
+    imprint.addEventListener("click",(e)=>{
+      if(e.target===imprint) closeImprint(e);
+    });
+  }
+
   const items=[...document.querySelectorAll(".reveal")];
 
   if(!("IntersectionObserver" in window)){
@@ -663,12 +689,14 @@ document.addEventListener("DOMContentLoaded",()=>{
   <div class="wrap">
     <div class="label">MEMBERSHIP</div>
     <h2>Reserved for a selected circle.</h2>
-    <form name="membership" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="membership">
-      <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
-      <input name="full-name" type="text" placeholder="Full Name *" required>
-      <input name="phone" type="tel" placeholder="Phone Number *" required>
-      <input name="email" type="email" placeholder="Email *" required>
+    <form name="membership" method="POST" action="https://formsubmit.co/the35bodrum@gmail.com">
+      <input type="hidden" name="_subject" value="New THE 58 Membership Request">
+      <input type="hidden" name="_next" value="http://the58bodrum.com/success.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input name="Full Name" type="text" placeholder="Full Name *" autocomplete="name" required>
+      <input name="Phone Number" type="tel" placeholder="Phone Number *" autocomplete="tel" required>
+      <input name="email" type="email" placeholder="Email *" autocomplete="email" required>
       <button type="submit">SUBMIT REQUEST</button>
     </form>
   </div>
@@ -687,13 +715,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     <div class="imprint-location">BODRUM</div>
     <p><strong>Cesur Altay</strong></p>
     <p>Private Members Club</p>
-    <a class="imprint-back" href="#" onclick="closeImprint(event)">CLOSE</a>
+    <a class="imprint-back" href="#" onclick="closeImprint(event)" role="button">CLOSE</a>
   </div>
 </section>
 
 <footer>
   <div style="margin-bottom:12px;color:#918b83">THE 58 BODRUM · PRIVATE MEMBERS CLUB</div>
-  <a href="#imprint">IMPRINT</a>
+  <a href="imprint.html">IMPRINT</a>
   <span style="margin:0 10px;color:#4e4945">·</span>
   <a href="https://www.instagram.com/the58bodrum/" target="_blank" rel="noopener">INSTAGRAM</a>
   <div style="margin-top:16px;color:#5f5b55;letter-spacing:.14em">© 2025 THE 58. ALL RIGHTS RESERVED.</div>

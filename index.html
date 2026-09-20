@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE 58 | Private Members Club Bodrum</title>
+<meta name="description" content="THE 58 is a private members club in Bodrum, bringing together its own destinations, experiences and a wider world of possibilities.">
+<meta name="theme-color" content="#050505">
+
+<meta property="og:title" content="THE 58 | Private Members Club Bodrum">
+<meta property="og:description" content="A private members club in Bodrum, bringing together its own destinations, experiences and a wider world of possibilities.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the58bodrum.com/">
+<meta property="og:image" content="https://the58bodrum.com/the58-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="THE 58 Private Members Club Bodrum">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the58bodrum.com/the58-preview.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%278%27%20fill%3D%27%23050505%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2743%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2734%27%20fill%3D%27%23B59AF2%27%3E58%3C%2Ftext%3E%3C%2Fsvg%3E">
+
+
+<style>
+:root{
+  --bg:#050505;
+  --text:#EAE6EF;
+  --muted:#938C9B;
+  --lav:#B59AF2;
+  --line:#342B40;
+  --line-soft:rgba(181,154,242,.20);
+  --heroParallax:0px;
+  --heroMetaParallax:0px;
+  --heroCtaParallax:0px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit}
+.wrap{width:min(940px,100%);margin:auto}
+
+/* HERO */
+.hero{
+  padding:max(12px,calc(env(safe-area-inset-top) + 4px)) 24px 36px;
+  text-align:center;
+}
+.hero .wrap{width:min(980px,100%)}
+.the58-svg-title{
+  width:min(980px,100%);
+  margin:0 auto;
+  line-height:0;
+}
+.the58-svg-title svg{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+.the58-svg-title text{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:212px;
+  font-weight:400;
+  letter-spacing:-10px;
+  fill:var(--lav);
+}
+.club-title{
+  margin-top:12px;
+  color:var(--text);
+  font-size:12px;
+  letter-spacing:.5em;
+}
+.location{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.42em;
+}
+.btn{
+  display:inline-block;
+  margin-top:44px;
+  border:1px solid var(--lav);
+  padding:18px 32px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:10px;
+  letter-spacing:.30em;
+  transition:transform .28s ease,background-color .28s ease,color .28s ease,box-shadow .28s ease;
+  animation:accessGlow 5.5s ease-in-out infinite;
+}
+.btn:hover,.btn:focus-visible{
+  background:var(--lav);
+  color:var(--bg);
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(181,154,242,.16);
+}
+.btn:active{transform:translateY(0) scale(.985)}
+@keyframes accessGlow{
+  0%,100%{box-shadow:0 0 0 rgba(181,154,242,0)}
+  50%{box-shadow:0 0 24px rgba(181,154,242,.09)}
+}
+
+/* CLUB */
+.club-explanation{
+  padding:18px 24px 28px;
+  text-align:center;
+}
+.club-explanation-inner{
+  width:min(900px,100%);
+  margin:auto;
+}
+.club-label,.label,.beyond-label{
+  display:block;
+  color:var(--lav);
+  font-size:10px;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+}
+.club-label{margin-bottom:22px}
+.club-explanation h2{
+  margin:0 auto 24px;
+  max-width:760px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.08;
+  font-weight:400;
+}
+.club-explanation p{
+  max-width:760px;
+  margin:0 auto;
+  color:#918A9A;
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* EXPERIENCES */
+.core{
+  padding:18px 24px 24px;
+}
+.experience-list{
+  width:min(1050px,100%);
+  margin:auto;
+}
+.experience-row{
+  position:relative;
+  padding:34px 0 38px;
+  border-top:1px solid var(--line);
+  transition:border-color .28s ease;
+}
+.experience-row:last-child{
+  border-bottom:1px solid var(--line);
+}
+.experience-row::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:0;
+  height:1px;
+  background:linear-gradient(90deg,var(--lav),rgba(181,154,242,.25));
+  transition:width .8s cubic-bezier(.22,1,.36,1),opacity .28s ease;
+  opacity:.6;
+}
+.experience-row.is-visible::after{width:100%}
+.experience-copy{
+  transition:transform .32s ease;
+}
+.experience-copy h3{
+  margin:0 0 14px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:25px;
+  font-weight:400;
+  letter-spacing:.08em;
+  transition:color .28s ease,opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);
+}
+.experience-copy p{
+  max-width:760px;
+  margin:0;
+  color:#918A9A;
+  font-size:17px;
+  line-height:1.75;
+}
+.experience-row.reveal-prep .experience-copy h3{
+  opacity:0;
+  transform:translateY(10px);
+}
+.experience-row.reveal-prep.is-visible .experience-copy h3{
+  opacity:1;
+  transform:none;
+  transition-delay:.14s;
+}
+@media (hover:hover) and (pointer:fine){
+  .experience-row:hover{border-top-color:rgba(181,154,242,.58)}
+  .experience-row:hover::after{opacity:1}
+  .experience-row:hover .experience-copy{transform:translateX(8px)}
+  .experience-row:hover .experience-copy h3{color:var(--lav)}
+}
+
+/* BEYOND */
+.beyond{
+  padding:18px 24px 48px;
+}
+.beyond-inner{
+  position:relative;
+  width:min(720px,100%);
+  margin:auto;
+  padding:30px 24px 32px;
+  text-align:center;
+  border:1px solid transparent;
+  background:rgba(181,154,242,.025);
+  overflow:hidden;
+}
+.beyond-inner::before,
+.beyond-inner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.beyond-inner::before{
+  border-top:1px solid rgba(181,154,242,.34);
+  border-bottom:1px solid rgba(181,154,242,.20);
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .95s cubic-bezier(.22,1,.36,1);
+}
+.beyond-inner::after{
+  border-left:1px solid rgba(181,154,242,.24);
+  border-right:1px solid rgba(181,154,242,.24);
+  transform:scaleY(0);
+  transform-origin:center top;
+  transition:transform .95s cubic-bezier(.22,1,.36,1) .18s;
+}
+.beyond.is-visible .beyond-inner::before,
+.beyond.is-visible .beyond-inner::after{
+  transform:scale(1);
+}
+.beyond-label{margin-bottom:18px}
+.beyond-copy{
+  max-width:610px;
+  margin:0 auto;
+  color:#AFA8B9;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* MEMBERSHIP */
+.membership{
+  padding:86px 24px 120px;
+  border-top:1px solid #111;
+  text-align:center;
+}
+.membership .wrap{width:min(760px,100%)}
+.membership h2{
+  max-width:680px;
+  margin:16px auto 44px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(38px,6vw,62px);
+  line-height:1.08;
+  font-weight:400;
+}
+.membership form{
+  max-width:640px;
+  margin:auto;
+  padding:10px 28px 30px;
+  border:1px solid rgba(181,154,242,.18);
+  background:rgba(181,154,242,.018);
+  text-align:left;
+}
+.membership input{
+  display:block;
+  width:100%;
+  min-height:70px;
+  border:0;
+  border-bottom:1px solid var(--line);
+  border-radius:0;
+  background:
+    linear-gradient(var(--lav),var(--lav)) left bottom / 0 1px no-repeat,
+    transparent;
+  color:var(--text);
+  padding:24px 4px 18px;
+  font-size:16px;
+  outline:none;
+  transition:border-color .25s ease,background-size .35s cubic-bezier(.22,1,.36,1);
+}
+.membership input::placeholder{color:#81798A;opacity:1}
+.membership input:focus{
+  border-bottom-color:rgba(181,154,242,.15);
+  background-size:100% 1px,100% 100%;
+}
+.membership button{
+  display:block;
+  width:100%;
+  min-height:56px;
+  margin:34px auto 0;
+  border:1px solid var(--lav);
+  background:transparent;
+  color:var(--text);
+  padding:18px;
+  font-size:10px;
+  letter-spacing:.32em;
+  cursor:pointer;
+  transition:background-color .28s ease,color .28s ease,transform .28s ease,box-shadow .28s ease;
+}
+.membership button:hover,.membership button:focus-visible{
+  background:var(--lav);
+  color:var(--bg);
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(181,154,242,.14);
+}
+.membership button:active{transform:translateY(0) scale(.985)}
+
+/* IMPRINT */
+.imprint-page{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  min-height:100svh;
+  overflow-y:auto;
+  background:var(--bg);
+  padding:105px 24px 120px;
+  text-align:center;
+}
+.imprint-page.is-open{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.imprint-page .wrap{width:min(760px,100%)}
+.imprint-logo{
+  width:min(620px,100%);
+  margin:0 auto 6px;
+  line-height:0;
+}
+.imprint-logo svg{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+.imprint-logo text{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:178px;
+  font-weight:400;
+  letter-spacing:-8px;
+  fill:var(--lav);
+}
+.imprint-location{
+  margin:0 0 48px;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.42em;
+}
+.imprint-page p{
+  margin:0 0 24px;
+  color:var(--muted);
+  line-height:1.8;
+}
+.imprint-page strong{color:var(--lav);font-weight:400}
+.imprint-back{
+  display:inline-block;
+  margin-top:40px;
+  color:var(--lav);
+  text-decoration:none;
+  font-size:10px;
+  letter-spacing:.28em;
+}
+
+/* FOOTER */
+footer{
+  padding:38px 20px max(38px,env(safe-area-inset-bottom));
+  border-top:1px solid #111;
+  text-align:center;
+  color:#5f5b55;
+  font-size:10px;
+  letter-spacing:.22em;
+  line-height:1.8;
+}
+footer a{color:#918b83;text-decoration:none}
+
+/* ENTRANCE ANIMATIONS */
+.reveal{
+  opacity:1;
+  transform:none;
+}
+.reveal.reveal-prep{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+}
+.reveal.reveal-prep.is-visible{
+  opacity:1;
+  transform:none;
+}
+.hero-logo{
+  opacity:0;
+  filter:blur(10px);
+  transform:translateY(calc(12px + var(--heroParallax))) scale(.985);
+  animation:heroLogoIn 1.2s cubic-bezier(.22,1,.36,1) .08s forwards;
+  will-change:transform,filter,opacity;
+}
+.hero-meta{
+  opacity:0;
+  transform:translateY(calc(12px + var(--heroMetaParallax)));
+  animation:heroMetaIn .95s cubic-bezier(.22,1,.36,1) .55s forwards;
+  will-change:transform,opacity;
+}
+.hero-cta{
+  opacity:0;
+  transform:translateY(calc(12px + var(--heroCtaParallax)));
+  animation:heroCtaIn .95s cubic-bezier(.22,1,.36,1) .85s forwards,accessGlow 5.5s ease-in-out 1.9s infinite;
+  will-change:transform,opacity;
+}
+@keyframes heroLogoIn{
+  from{opacity:0;filter:blur(10px);transform:translateY(12px) scale(.985)}
+  to{opacity:1;filter:blur(0);transform:translateY(var(--heroParallax)) scale(1)}
+}
+@keyframes heroMetaIn{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(var(--heroMetaParallax))}
+}
+@keyframes heroCtaIn{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(var(--heroCtaParallax))}
+}
+
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:1px solid var(--lav);
+  outline-offset:4px;
+}
+
+@media(max-width:650px){
+  .hero{padding:18px 18px 38px}
+  .the58-svg-title{width:min(100%,680px)}
+  .the58-svg-title text{font-size:186px;letter-spacing:-9px}
+  .club-title{
+    margin-top:16px;
+    font-size:10px;
+    letter-spacing:.42em;
+    line-height:1.5;
+  }
+  .location{
+    margin-top:9px;
+    font-size:9px;
+    letter-spacing:.34em;
+  }
+  .btn{
+    margin-top:36px;
+    padding:17px 24px;
+    letter-spacing:.25em;
+  }
+
+  .club-explanation{padding:34px 22px 30px}
+  .club-explanation h2{
+    font-size:clamp(34px,10vw,48px);
+    margin-bottom:20px;
+  }
+  .club-explanation p{
+    font-size:15px;
+    line-height:1.75;
+  }
+
+  .core{padding:12px 22px 18px}
+  .experience-row{padding:27px 0 29px}
+  .experience-copy h3{
+    font-size:21px;
+    letter-spacing:.07em;
+    margin-bottom:11px;
+  }
+  .experience-copy p{
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  .beyond{padding:20px 18px 38px}
+  .beyond-inner{padding:27px 18px 29px}
+  .beyond-copy{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .membership{padding:70px 18px 88px}
+  .membership h2{
+    font-size:clamp(36px,10vw,50px);
+    margin-bottom:32px;
+  }
+  .membership form{padding:5px 18px 24px}
+  .membership input{min-height:64px}
+  .membership button{
+    min-height:54px;
+    padding:17px 18px;
+    letter-spacing:.27em;
+  }
+
+  footer{padding:34px 18px max(34px,env(safe-area-inset-bottom))}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+  .reveal,.reveal-prep,.hero-logo,.hero-meta,.hero-cta{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}
+</style>
+
+
+
+<script>
+function openImprint(e){
+  if(e) e.preventDefault();
+  const panel=document.getElementById("imprint");
+  if(!panel) return;
+  panel.classList.add("is-open");
+  panel.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+}
+
+function closeImprint(e){
+  if(e) e.preventDefault();
+  const panel=document.getElementById("imprint");
+  if(!panel) return;
+  panel.classList.remove("is-open");
+  panel.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+  if(location.hash==="#imprint"){
+    history.replaceState(null,"",location.pathname+location.search);
+  }
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  const imprint=document.getElementById("imprint");
+  if(location.hash==="#imprint") openImprint();
+  window.addEventListener("hashchange",()=>{
+    if(location.hash==="#imprint") openImprint();
+    else if(imprint) closeImprint();
+  });
+  if(imprint){
+    imprint.addEventListener("click",(e)=>{
+      if(e.target===imprint) closeImprint(e);
+    });
+  }
+
+  const items=[...document.querySelectorAll(".reveal")];
+
+  if(!("IntersectionObserver" in window)){
+    items.forEach(el=>el.classList.add("is-visible"));
+    return;
+  }
+
+  items.forEach((el,i)=>{
+    el.classList.add("reveal-prep");
+    el.style.transitionDelay=Math.min(i*45,180)+"ms";
+  });
+
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08,rootMargin:"0px 0px -4% 0px"});
+
+  items.forEach(el=>observer.observe(el));
+
+  setTimeout(()=>{
+    items.forEach(el=>el.classList.add("is-visible"));
+  },1800);
+
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    return;
+  }
+
+  const root=document.documentElement;
+  let ticking=false;
+
+  const updateParallax=()=>{
+    const scrollY=window.scrollY || window.pageYOffset;
+    const logoMove=Math.max(Math.min(scrollY * 0.035, 10), 0);
+    const metaMove=Math.max(Math.min(scrollY * 0.022, 6), 0);
+    const ctaMove=Math.max(Math.min(scrollY * 0.015, 4), 0);
+
+    root.style.setProperty("--heroParallax", logoMove.toFixed(2) + "px");
+    root.style.setProperty("--heroMetaParallax", metaMove.toFixed(2) + "px");
+    root.style.setProperty("--heroCtaParallax", ctaMove.toFixed(2) + "px");
+    ticking=false;
+  };
+
+  window.addEventListener("scroll",()=>{
+    if(!ticking){
+      window.requestAnimationFrame(updateParallax);
+      ticking=true;
+    }
+  },{passive:true});
+
+  updateParallax();
+});
+</script>
+
+</head>
+
+<body>
+<main class="hero">
+  <div class="wrap">
+    <h1 class="the58-svg-title hero-logo" aria-label="THE 58">
+      <svg viewBox="0 0 760 190" role="img" aria-hidden="true">
+        <text x="300" y="150" text-anchor="middle">THE</text>
+        <text x="525" y="150" text-anchor="middle">5</text>
+        <text class="eight" x="625" y="181" text-anchor="middle">8</text>
+      </svg>
+    </h1>
+    <div class="hero-meta">
+      <div class="club-title">PRIVATE MEMBERS CLUB</div>
+      <div class="location">BODRUM · TÜRKİYE</div>
+    </div>
+    <a class="btn hero-cta" href="#membership">REQUEST ACCESS</a>
+  </div>
+</main>
+
+<section class="club-explanation reveal">
+  <div class="club-explanation-inner">
+    <span class="club-label">THE CLUB</span>
+    <h2>A different way to experience Bodrum.</h2>
+    <p>THE 58 is a private members club in Bodrum, bringing its own destinations, experiences and a wider world of possibilities together under one membership. It offers a more personal way to experience the city, where privacy comes naturally and possibilities extend far beyond the club itself.</p>
+  </div>
+</section>
+
+<section class="core" id="experiences">
+  <div class="experience-list">
+    <article class="experience-row reveal">
+      <div class="experience-copy">
+        <h3>KITCHEN</h3>
+        <p>Every taste, every occasion and every way you choose to enjoy it, across a world of dining.</p>
+      </div>
+    </article>
+
+    <article class="experience-row reveal">
+      <div class="experience-copy">
+        <h3>BEACH CLUB</h3>
+        <p>Where the unexpected is part of the experience, comfort comes naturally and the right circle makes all the difference.</p>
+      </div>
+    </article>
+
+    <article class="experience-row reveal">
+      <div class="experience-copy">
+        <h3>NIGHTCLUB</h3>
+        <p>Our nightlife exists beyond the usual Bodrum circuit, with its own programme, atmosphere and community.</p>
+      </div>
+    </article>
+
+    <article class="experience-row reveal">
+      <div class="experience-copy">
+        <h3>SPORT CLUB</h3>
+        <p>A private sports club open 24/7, combining training, dedicated coaching, wellness, spa and recovery.</p>
+      </div>
+    </article>
+
+    <article class="experience-row reveal">
+      <div class="experience-copy">
+        <h3>YACHTING</h3>
+        <p>The possibilities continue at sea.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="beyond reveal">
+  <div class="beyond-inner">
+    <span class="beyond-label">BEYOND</span>
+    <p class="beyond-copy">Beyond our own destinations, THE 58 makes possible what does not fit into a category, from exclusive events and special access to personal arrangements.</p>
+  </div>
+</section>
+
+<section class="membership reveal" id="membership">
+  <div class="wrap">
+    <div class="label">MEMBERSHIP</div>
+    <h2>Reserved for a selected circle.</h2>
+    <form id="membershipForm" name="membership">
+      <input type="hidden" name="_subject" value="New THE 58 Membership Request">
+      <input type="hidden" name="_next" value="http://the58bodrum.com/success.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input name="Full Name" type="text" placeholder="Full Name *" autocomplete="name" required>
+      <input name="Phone Number" type="tel" placeholder="Phone Number *" autocomplete="tel" required>
+      <input name="email" type="email" placeholder="Email *" autocomplete="email" required>
+      <button type="submit">SUBMIT REQUEST</button>
+    </form>
+  </div>
+</section>
+
+<section id="imprint" class="imprint-page" aria-hidden="true">
+  <div class="wrap">
+    <div class="label">IMPRINT</div>
+    <h2 class="imprint-logo" aria-label="THE 58">
+      <svg viewBox="0 0 760 190" role="img" aria-hidden="true">
+        <text x="300" y="150" text-anchor="middle">THE</text>
+        <text x="525" y="150" text-anchor="middle">5</text>
+        <text class="eight" x="625" y="181" text-anchor="middle">8</text>
+      </svg>
+    </h2>
+    <div class="imprint-location">BODRUM</div>
+    <p><strong>Cesur Altay</strong></p>
+    <p>Private Members Club</p>
+    <a class="imprint-back" href="#" onclick="closeImprint(event)" role="button">CLOSE</a>
+  </div>
+</section>
+
+<footer>
+  <div style="margin-bottom:12px;color:#918b83">THE 58 BODRUM · PRIVATE MEMBERS CLUB</div>
+  <a href="imprint.html">IMPRINT</a>
+  <span style="margin:0 10px;color:#4e4945">·</span>
+  <a href="https://www.instagram.com/the58bodrum/" target="_blank" rel="noopener">INSTAGRAM</a>
+  <div style="margin-top:16px;color:#5f5b55;letter-spacing:.14em">© 2025 THE 58. ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script>
+(function () {
+  const form = document.getElementById('membershipForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+    if (submitButton) submitButton.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/the35bodrum@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.success === false) {
+        throw new Error('Submission failed');
+      }
+
+      window.location.href = 'success.html';
+    } catch (error) {
+      alert('Your request could not be sent. Please try again.');
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
